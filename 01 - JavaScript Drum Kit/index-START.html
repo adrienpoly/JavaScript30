@@ -59,6 +59,34 @@
 
 <script>
 
+    function playSound (keyCode) {
+      const sound =  document.querySelector(`audio[data-key= "${keyCode}"]`);
+      if (!sound) return; //ignore other keyboard entries
+
+      sound.currentTime = 0; // trick allow for starting a new sound before previous ended
+      sound.play();
+
+      //highlight the key
+      const key =  document.querySelector(`div[data-key= "${keyCode}"]`);
+      key.classList.add('playing');
+    }
+
+    function removeTransition (e) {
+      if (e.propertyName !== 'transform') return;
+      this.classList.remove('playing');
+    }
+
+    document.querySelectorAll('.key').forEach(key => {
+      // listen for the end of transition event to remove the highlight effect
+      key.addEventListener('transitionend', removeTransition);
+
+      // listen to mouse click on the keys to replicate keyboard keys
+      key.addEventListener('click', function(e) {
+        playSound(this.closest('.key').dataset.key)
+      });
+    })
+
+    window.addEventListener('keydown', e => { playSound(e.keyCode) });
 </script>
 
 
