@@ -1,22 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Type Ahead 👀</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Type Ahead 👀</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
 
-  <form class="search-form">
-    <input type="text" class="search" placeholder="City or State">
-    <ul class="suggestions">
-      <li>Filter for a city</li>
-      <li>or a state</li>
-    </ul>
-  </form>
-<script>
-const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+    <form class="search-form">
+      <input type="text" class="search" placeholder="City or State">
+      <ul class="suggestions">
+        <li>Filter for a city</li>
+        <li>or a state</li>
+      </ul>
+    </form>
 
-</script>
+    <script>
+
+      //////////////////////////////////////////////////////////////////////////
+      //                                                                      //
+      //  Solution to Wes Bos challenge wit several enhancements              //
+      //  - highlight case sensitive preserving the original text             //
+      //  - after search click to fill the input                              //
+      //                                                                      //
+      //////////////////////////////////////////////////////////////////////////
+
+      const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+      let data = {}
+
+      fetch(endpoint)
+        .then(response => { return response.json()})
+        .then(d => { data = d })
+        .then(enableSearch)
+
+      const input = document.querySelector('.search-form input');
+      const suggestions = document.querySelector('ul.suggestions');
+
+      function enableSearch () {
+        // listen for search entries
+        input.addEventListener('keyup', input => {
+          autocomplete(input);
+        });
+
+        // listen for click to select a result
+        suggestions.addEventListener('click', result => {
+          setInput(result);
+        });
+      }
+
+      function setInput (result) {
+        const cityName = result.target.closest('li').querySelector('.name').textContent.trim();
+        input.value = cityName;
+        suggestions.innerHTML = ""
+      }
+
+      function highlight (string, word) {
+        //hightling function to preserve original Case of the string
+        const regex = new RegExp(word, 'gi')
+        const matches = string.match(regex)
+
+        if (matches) {
+          //keep only unique matches
+          const casedWordsToSearch = [...new Set(matches)]
+
+          casedWordsToSearch.forEach((word) => {
+            //regex to exclude what is inside <....>
+            const regex   = new RegExp(`(${word})(?![^<]*>|[^<>]*<\/)`, 'g')
+            string = string.replace(regex, `<span class="hl">${word}</span>`)
+          })
+        }
+        return string
+      }
+
+      function autocomplete (input) {
+        const wordToSearch = input.target.value
+        let results = data.filter((el) => {
+          return (el.city + ", " + el.state).toLowerCase().includes(wordToSearch.toLowerCase())
+        })
+
+        suggestions.innerHTML = results.reduce((html, result) => {
+          const population = parseInt(result.population, 10).toLocaleString()
+
+          return html +=
+            `<li>
+              <span class="name">
+                ${highlight(result.city, wordToSearch)}, ${highlight(result.state, wordToSearch)}
+              </span>
+              <span class="population">${population}</span>
+            </li>`
+        }, '')
+      }
+    </script>
   </body>
 </html>
