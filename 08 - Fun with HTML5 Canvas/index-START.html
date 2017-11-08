@@ -7,6 +7,48 @@
 <body>
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
+  const canvas  = document.querySelector('#draw');
+  const ctx     = canvas.getContext('2d');
+  initCanvas();
+
+  let isDrawing = false;
+  let lastX     = 0;
+  let lastY     = 0;
+  let hue       = 0;
+  let direction = true;
+
+  window.addEventListener('resize', initCanvas);
+  document.addEventListener('mousemove', draw);
+  document.addEventListener('mouseup',    () => isDrawing = false);
+  document.addEventListener('mousedout',  () => isDrawing = false);
+  document.addEventListener('mousedown',  (e) => {
+    isDrawing = true;
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+  });
+
+
+  function draw (e) {
+    if (!isDrawing) return;
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+    [lastX, lastY] = [e.offsetX, e.offsetY];
+
+    hue = hue >= 360 ? 0 : hue + 1;
+    direction   = (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) ? !direction : direction;
+    ctx.lineWidth = direction ? ctx.lineWidth + 1 : ctx.lineWidth - 1
+  }
+
+  function initCanvas () {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+    ctx.lineJoin    = 'round';
+    ctx.lineCap     = 'round';
+    ctx.lineWidth   = 1;
+  }
+
 </script>
 
 <style>
