@@ -98,7 +98,33 @@
     </div>
   </div>
 
-<script>
-</script>
+  <script>
+    let lastCheckedId = null;
+    const checkboxes = document.querySelectorAll('input');
+    const cbArray = [...checkboxes]
+
+    function checkInBetween (e, index) {
+      if (e.target.checked){
+        if (e.shiftKey && (lastCheckedId !== null)){
+          //select all checkbox between current and lastChecked
+          const start = Math.min(lastCheckedId, index)
+          const end = Math.max(lastCheckedId, index)
+          cbArray.slice(start, end)
+            .forEach(checkbox => checkbox.checked = true)
+        }
+        else {
+          lastCheckedId = index;
+        }
+      }
+      else {
+        lastCheckedId = null;
+      }
+    }
+
+    checkboxes.forEach((checkbox, index) => {
+      checkbox.addEventListener('click', (e) => checkInBetween(e, index))
+    })
+
+  </script>
 </body>
 </html>
