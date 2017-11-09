@@ -58,6 +58,20 @@
       };
     }
 
+    const images = document.querySelectorAll('img');
+
+    function showOnScroll () {
+      images.forEach((image) => {
+        if (window.scrollY >= image.offsetTop - window.innerHeight + image.height / 3) {
+          image.classList.add('active');
+        } else {
+          image.classList.remove('active');
+        }
+      })
+    }
+
+    document.addEventListener('scroll', debounce(showOnScroll));
+
   </script>
 
   <style>
