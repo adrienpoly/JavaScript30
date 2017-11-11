@@ -43,9 +43,14 @@ nav {
   background:black;
   top:0;
   width: 100%;
-  transition:all 0.5s;
+  transition:all 1s;
+  /*position: sticky;*/
   position: relative;
   z-index: 1;
+}
+
+.fixed-nav nav {
+  position: sticky;
 }
 
 nav ul {
@@ -61,6 +66,10 @@ nav li {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.fixed-nav li.logo {
+    max-width: 500px;
 }
 
 li.logo {
