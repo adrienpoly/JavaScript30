@@ -36,7 +36,7 @@ My recommendation to take the most of those courses is to look at the beginning 
 - ✅&nbsp;[Geolocation](./21%20-%20Geolocation/index-START.html) - to fully see the results must be watch form a mobile phone with GPS enabled.
 - ✅&nbsp;[Follow Along Link Highlighter](./22%20-%20Follow%20Along%20Link%20Highlighter/index-START.html)
 - ✅&nbsp;[Speech Synthesis](./23%20-%20Speech%20Synthesis/index-START.html)
-- ✅&nbsp;[Sticky Nav]()
+- ✅&nbsp;[Sticky Nav](./24%20-%20Sticky%20Nav/index-START.html)
 - &nbsp;[Event Capture, Propagation, Bubbling and Once](./25%20-%20Event%20Capture%2C%20Propagation%2C%20Bubbling%20and%20Once/index-START.html)
 - &nbsp;[Stripe Follow Along Nav]()
 - &nbsp;[Click and Drag]()
