@@ -28,7 +28,7 @@ My recommendation to take the most of those courses is to look at the very begin
 - ✅&nbsp;[Sort Without Articles](./17%20-%20Sort%20Without%20Articles/index-START.html)
 - ✅&nbsp;[Adding Up Times with Reduce](./18%20-%20Adding%20Up%20Times%20with%20Reduce/index-START.html)
 - ✅&nbsp;[Webcam Fun](./19%20-%20Webcam%20Fun/index.html)
--&nbsp;[Speech Detection]()
+- ✅&nbsp;[Speech Detection](./19%20-%20Webcam%20Fun/index.html)
 -&nbsp;[Geolocation]()
 -&nbsp;[Follow Along Link Highlighter]()
 -&nbsp;[Speech Synthesis]()
