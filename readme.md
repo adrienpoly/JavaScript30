@@ -29,7 +29,7 @@ My recommendation to take the most of those courses is to look at the very begin
 - ✅&nbsp;[Adding Up Times with Reduce](./18%20-%20Adding%20Up%20Times%20with%20Reduce/index-START.html)
 - ✅&nbsp;[Webcam Fun](./19%20-%20Webcam%20Fun/index.html)
 - ✅&nbsp;[Speech Detection](./19%20-%20Webcam%20Fun/index.html)
--&nbsp;[Geolocation]()
+- ✅&nbsp;[Geolocation](./21%20-%20Geolocation/index-START.html) - to fully see the results must be watch form a mobile phone with GPS enabled.
 -&nbsp;[Follow Along Link Highlighter]()
 -&nbsp;[Speech Synthesis]()
 - ✅&nbsp;[Sticky Nav]()
