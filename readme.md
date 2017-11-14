@@ -8,6 +8,7 @@ Before jumping into React, I completed this excellent set of courses to strength
 
 Learned a lot of ES6 tricks and feeling much more comfortable getting into React 🚀.
 
+## Getting the most out of it
 
 My recommendation to take the most of those courses:
 * look at the beginning of the video to understand what needs to be achieved.
@@ -36,7 +37,7 @@ My recommendation to take the most of those courses:
 - ✅&nbsp;[Adding Up Times with Reduce](./18%20-%20Adding%20Up%20Times%20with%20Reduce/index-START.html)
 - ✅&nbsp;[Webcam Fun](./19%20-%20Webcam%20Fun/index.html)
 - ✅&nbsp;[Speech Detection](./19%20-%20Webcam%20Fun/index.html)
-- ✅&nbsp;[Geolocation](./21%20-%20Geolocation/index-START.html) - to fully see the results must be watch form a mobile phone with GPS enabled.
+- ✅&nbsp;[Geolocation](./21%20-%20Geolocation/index-START.html) - to fully see the results must be watch from a mobile phone with GPS enabled.
 - ✅&nbsp;[Follow Along Link Highlighter](./22%20-%20Follow%20Along%20Link%20Highlighter/index-START.html)
 - ✅&nbsp;[Speech Synthesis](./23%20-%20Speech%20Synthesis/index-START.html)
 - ✅&nbsp;[Sticky Nav](./24%20-%20Sticky%20Nav/index-START.html)
