@@ -42,7 +42,7 @@ My recommendation to take the most of those courses:
 - ✅&nbsp;[Speech Synthesis](./23%20-%20Speech%20Synthesis/index-START.html)
 - ✅&nbsp;[Sticky Nav](./24%20-%20Sticky%20Nav/index-START.html)
 - ✅&nbsp;[Event Capture, Propagation, Bubbling and Once](./25%20-%20Event%20Capture%2C%20Propagation%2C%20Bubbling%20and%20Once/index-START.html)
-- &nbsp;[Stripe Follow Along Nav]()
+- ✅&nbsp;[Stripe Follow Along Nav](./26%20-%20Stripe%20Follow%20Along%20Nav/index-START.html)
 - &nbsp;[Click and Drag]()
 - &nbsp;[Video Speed Controller]()
 - &nbsp;[Countdown Timer]()
