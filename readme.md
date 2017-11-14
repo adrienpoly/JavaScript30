@@ -9,7 +9,10 @@ Before jumping into React, I completed this excellent set of courses to strength
 Learned a lot of ES6 tricks and feeling much more comfortable getting into React 🚀.
 
 
-My recommendation to take the most of those courses is to look at the beginning of the video to understand what needs to be achieved and then try to solve the problem first on your own before looking at the solution.
+My recommendation to take the most of those courses:
+* look at the beginning of the video to understand what needs to be achieved.
+* try to solve the problem first on your own.
+* watch the video to get all the trick from Wes and update your solution accordingly.
 
 
 ## Exercises
@@ -37,7 +40,7 @@ My recommendation to take the most of those courses is to look at the beginning 
 - ✅&nbsp;[Follow Along Link Highlighter](./22%20-%20Follow%20Along%20Link%20Highlighter/index-START.html)
 - ✅&nbsp;[Speech Synthesis](./23%20-%20Speech%20Synthesis/index-START.html)
 - ✅&nbsp;[Sticky Nav](./24%20-%20Sticky%20Nav/index-START.html)
-- &nbsp;[Event Capture, Propagation, Bubbling and Once](./25%20-%20Event%20Capture%2C%20Propagation%2C%20Bubbling%20and%20Once/index-START.html)
+- ✅&nbsp;[Event Capture, Propagation, Bubbling and Once](./25%20-%20Event%20Capture%2C%20Propagation%2C%20Bubbling%20and%20Once/index-START.html)
 - &nbsp;[Stripe Follow Along Nav]()
 - &nbsp;[Click and Drag]()
 - &nbsp;[Video Speed Controller]()
