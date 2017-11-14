@@ -43,7 +43,7 @@ My recommendation to take the most of those courses:
 - ✅&nbsp;[Sticky Nav](./24%20-%20Sticky%20Nav/index-START.html)
 - ✅&nbsp;[Event Capture, Propagation, Bubbling and Once](./25%20-%20Event%20Capture%2C%20Propagation%2C%20Bubbling%20and%20Once/index-START.html)
 - ✅&nbsp;[Stripe Follow Along Nav](./26%20-%20Stripe%20Follow%20Along%20Nav/index-START.html)
-- &nbsp;[Click and Drag]()
+- ✅&nbsp;[Click and Drag](./27%20-%20Click%20and%20Drag/index-START.html)
 - &nbsp;[Video Speed Controller]()
 - &nbsp;[Countdown Timer]()
 - &nbsp;[Whack A Mole]()
